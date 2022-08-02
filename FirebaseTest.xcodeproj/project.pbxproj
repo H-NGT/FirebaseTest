@@ -11,6 +11,8 @@
 		AF0AF9362899663E00F3D525 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AF9352899663E00F3D525 /* ContentView.swift */; };
 		AF0AF9382899664000F3D525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0AF9372899664000F3D525 /* Assets.xcassets */; };
 		AF0AF93B2899664000F3D525 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0AF93A2899664000F3D525 /* Preview Assets.xcassets */; };
+		AF0AF9432899688700F3D525 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF0AF9422899688700F3D525 /* FirebaseAuth */; };
+		AF0AF945289968C200F3D525 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF0AF944289968C200F3D525 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		AF0AF9352899663E00F3D525 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF0AF9372899664000F3D525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0AF93A2899664000F3D525 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF0AF944289968C200F3D525 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0AF9432899688700F3D525 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 				AF0AF9332899663E00F3D525 /* FirebaseTestApp.swift */,
 				AF0AF9352899663E00F3D525 /* ContentView.swift */,
 				AF0AF9372899664000F3D525 /* Assets.xcassets */,
+				AF0AF944289968C200F3D525 /* GoogleService-Info.plist */,
 				AF0AF9392899664000F3D525 /* Preview Content */,
 			);
 			path = FirebaseTest;
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = FirebaseTest;
+			packageProductDependencies = (
+				AF0AF9422899688700F3D525 /* FirebaseAuth */,
+			);
 			productName = FirebaseTest;
 			productReference = AF0AF9302899663E00F3D525 /* FirebaseTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = AF0AF9272899663E00F3D525;
+			packageReferences = (
+				AF0AF9412899688600F3D525 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AF0AF9312899663E00F3D525 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +138,7 @@
 			files = (
 				AF0AF93B2899664000F3D525 /* Preview Assets.xcassets in Resources */,
 				AF0AF9382899664000F3D525 /* Assets.xcassets in Resources */,
+				AF0AF945289968C200F3D525 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF0AF9412899688600F3D525 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF0AF9422899688700F3D525 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF0AF9412899688600F3D525 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF0AF9282899663E00F3D525 /* Project object */;
 }
